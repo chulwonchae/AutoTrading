@@ -4,7 +4,7 @@
 
 Did you know? South Korea has one of the world's most vibrant retail trading communities! Here are some fascinating facts:
 
-📌 Over **10 million** retail investors actively trade in the Korean market (that's nearly **20% of the population!**)  
+📌 Over **10 million** retail investors actively trade in the Korean market (that's nearly **38% of the population!**)  
 📌 The **KOSPI 200 futures** were once the world's most actively traded derivatives contract  
 📌 Korean retail investors are known for their **sophisticated trading approaches and tech-savviness**  
 
