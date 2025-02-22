@@ -64,8 +64,29 @@ class kotrade:
 
 
     # Now Important part!!!! Sector!
+    #반환값의 코드와 코드명 구분은 ‘|’ 코드의 구분은 ‘;’ Ex) 100|태양광_폴리실리콘;152|합성섬유 
+    def GetThemeGroupList(self, type):
+        data = self.ocx.dynamicCall("GetThemeGroupList(int)", type)
+        tokens = data.split(';')
+        data_dic = {}
+        for theme in tokens:
+            code, name = theme.split('|') #unpacking
+            if type == 0: # 0:코드순 1: 테마순 ex code: 001, name = AI
+                data_dic[code] = name #ex) "001"을 키로 하고 "AI"를 값으로 저장 → { "001": "AI" }
+            else:
+                data_dic[name] = code #"AI"를 키로 하고 "001"을 값으로 저장 → { "AI": "001" }
+        return data_dic
     
-
+    # Stocks that are in the sector
+    def GetThemeGroupCode(self, theme_code): #반환값의 종목코드간 구분은 ‘;’ Ex) A000660;A005930 
+        data = self.ocx.dynamicCall("GetThemeGroupCode(QString)", theme_code)
+        tokens = data.split(';')
+        
+        result = [] 
+        for code in tokens:
+            result.append(code[1:])
+        return result
+        # return tokens
 
 
 app = QApplication(sys.argv) # 모든 pyqt객체 생성을 위해서는 이것을 무조건 써줘야함

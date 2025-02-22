@@ -1,5 +1,6 @@
 from KoTrade import *
 import pandas as pd
+import pprint
 
 
 kotrade = kotrade() #키움클래스에 객체를 생성하면
@@ -92,3 +93,31 @@ print("로그인 완료")
 
 #     if target is True: #만약 타겟이 트루면
 #         print(code, name, state)
+
+# # Sector
+# sector = kotrade.GetThemeGroupList(1)
+# #pprint.pprint(sector)
+# sectors = list(sector.keys())
+
+# for name in sectors:
+#     if '반도체' in name:
+#         print(name, sector_code[name])
+
+# 섹터안 종목
+sector_code = kotrade.GetThemeGroupList(0)
+tickers_sector = kotrade.GetThemeGroupCode('100')
+print('*'*40)
+print("Sector:", sector_code['100'])
+for code in tickers_sector:
+    name = kotrade.GetMasterCodeName(code)
+    print(code, name)
+
+# OR
+
+# sector_code = kotrade.GetThemeGroupList(0)
+# tickers_sector = kotrade.GetThemeGroupCode('100')
+
+# print("테마코드: {} 테마명: {}".format('100', sector_code['100']))
+# for code in tickers_sector:
+#     name = kotrade.GetMasterCodeName(code[1:])
+#     print(code[1:],name)
