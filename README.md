@@ -22,3 +22,8 @@ Did you know? South Korea has one of the world's most vibrant retail trading com
 ✨ **Algorithmic Trading** - Implement and execute automated trading strategies  
 ✨ **Portfolio Management** - Track investments and optimize asset allocation  
 ✨ **Custom Indicators** - Create and test custom technical indicators  
+
+
+### Appendix
+TR Request
+![image](https://github.com/user-attachments/assets/b169a961-7840-47f6-b38f-fc7b93872692)
